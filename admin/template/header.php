@@ -12,7 +12,7 @@
     <!-- Boostsrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- External  CSS -->
-    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
