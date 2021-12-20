@@ -12,15 +12,16 @@
     <!-- Boostsrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- External  CSS -->
-    <link href="assets/font-awaesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
 
+
     <!-- Custom CSS for this Template -->
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="/assets/css/to-do.css" rel="stylesheet" href="">
+    <link href="assets/css/to-do.css" rel="stylesheet" href="">
 
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/datatables/jquery.dataTables.js"></script>
@@ -28,7 +29,7 @@
     <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
     <style>
     .header {
-        background: #328f6b;
+        background: #3FA796;
         color: #fff;
     }
 
@@ -37,9 +38,14 @@
     }
 
     #hidden {
-        display: none;
+        display: none
     }
     </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -48,7 +54,7 @@
         <!-- header start -->
         <header class="header black-bg">
             <div class="sidebar-toggle-box">
-                <div class="fa fa-bars tooltip" data-placement="right" data-original-title="Toggle Navigation"></div>
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!-- logo start -->
             <a href="index.php" class="logo"><b><?php echo $toko['nama_toko'];?></b> <small
