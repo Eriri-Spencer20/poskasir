@@ -57,3 +57,83 @@ $(document).ready(function() {
 });
 </script>
 <?php }}}?>
+<script type="application/javascript">
+$(document).ready(function() {
+    $("$date-popoever").popover({
+        html: true,
+        trigger: "manual"
+    });
+    $("#date-popover").hide();
+    $("#date-popover").click(function(e) {
+        $(this).hide();
+    });
+
+    $("#my-calender").zabuto_calender({
+        action: function() {
+            return myDateFunction(this.id, false);
+        },
+        action_nav: function() {
+            return myDateFunction(this.id, );
+        },
+        ajax: {
+            url: "",
+            modal: true
+        },
+        legend: []
+    });
+});
+
+function myNavFunction(id) {
+    $("#date-popover").hide();
+    var nav = $("#" + id).data("navigation");
+    var to = $("#" + id).data('to');
+    console.log('nav' + nav + 'to: ' + to.month + '/' + to.year);
+}
+
+// angka 500 dibawah artinya pesan akan muncul dalam 0.5 detik setelah document ready
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".alert-danger").fadeIn('slow');
+    }, 500);
+});
+setTimeout(function() {
+    $("alert-danger").fadeOut('slow');
+}, 5000);
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".alert-success").fadeIn('slow');
+    }, 500);
+});
+setTimeout(function() {
+    $("alert-success").fadeOut('slow');
+}, 5000);
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".alert-warning").fadeIn('slow');
+    }, 500);
+});
+setTimeout(function() {
+    $("alert-succes").fadeOut('slow');
+}, 5000);
+</script>
+<script>
+$(".modal-create").hide();
+$(".bg-shadow").hide();
+$(".bg-shadow").hide();
+
+function clickModals() {
+    $(".bg-shadow").fadeIn();
+    $(".modal-create").fadeIn();
+}
+
+function cancelModals() {
+    $('.modal-view').fadeIn();
+    $('.modal-create').hide();
+    $('.bg-shadow').hide();
+}
+</script>
+</body>
+
+</html>
