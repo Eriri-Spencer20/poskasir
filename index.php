@@ -4,7 +4,9 @@ session_start();
 
 if (!empty($_SESSION['admin'])) {
     require 'config.php';
-
+    include $view;
+    $lihat = new view($config);
+    $toko = $lihat -> toko();
     // admin
     include 'admin/template/header.php';
     include 'admin/template/sidebar.php';
