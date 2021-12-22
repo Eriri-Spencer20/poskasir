@@ -15,6 +15,7 @@
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
 
 
@@ -57,8 +58,8 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!-- logo start -->
-            <a href="index.php" class="logo"><b><?php echo $toko['nama_toko'];?></b> <small
-                    style="padding-left: 5px;font-size:13px;"><?php echo $toko['alamat_toko'];?></small> </a>
+            <a href="index.php" class="logo"><b><?php echo $toko['nama_toko']; ?></b> <small
+                    style="padding-left: 5px;font-size:13px;"><?php echo $toko['alamat_toko']; ?></small> </a>
             <!-- logo end -->
             <div class="nav notify-row" id="top_menu"></div>
             <!--  notification start -->
