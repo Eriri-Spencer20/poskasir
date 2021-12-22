@@ -1,11 +1,11 @@
 DAY 2
-membuat footer (true)
-menyelesaikan module (false)
-membuat fungsi (false)
+membuat footer (done)
+menyelesaikan module (done)
+membuat fungsi (done)
 
-Target membuat fungsi view 
+Target membuat fungsi view (done)
 
 DAY 3
-menyelesaikan function view 
-mengerjakan module
-mengerjakan function
+menyelesaikan function view (done)
+mengerjakan module (!done)
+mengerjakan function (!done)
