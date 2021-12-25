@@ -15,3 +15,6 @@ Break
 
 DAY 5
 membuat module barang (index.php) (done)
+
+DAY 6
+membuat module barang / edit (done)
