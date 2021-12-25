@@ -2,7 +2,7 @@
 <!-- footer start -->
 <footer class="site-footer">
     <div class="text-center">
-        <?php echo date('y'); ?> - Aplikasi Kasir
+        <?php echo date('Y'); ?> - Aplikasi Kasir
     </div>
 </footer>
 <!-- footer end -->
@@ -73,7 +73,7 @@ $(document).ready(function() {
             return myDateFunction(this.id, false);
         },
         action_nav: function() {
-            return myDateFunction(this.id, );
+            return myDateFunction(this.id);
         },
         ajax: {
             url: "",
@@ -134,6 +134,7 @@ function cancelModals() {
     $('.bg-shadow').hide();
 }
 </script>
+
 </body>
 
 </html>
