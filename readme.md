@@ -9,3 +9,9 @@ DAY 3
 menyelesaikan function view (done)
 mengerjakan module (!done)
 mengerjakan function (!done)
+
+DAY 4
+Break
+
+DAY 5
+membuat module barang (index.php) (done)
