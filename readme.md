@@ -18,3 +18,10 @@ membuat module barang (index.php) (done)
 
 DAY 6
 membuat module barang / edit (done)
+
+DAY 7
+Break
+
+DAY 8
+membuat module/barang/detail/index.php (done)
+membuat module/jual/index.php (undone)
