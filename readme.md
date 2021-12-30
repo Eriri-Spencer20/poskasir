@@ -24,4 +24,14 @@ Break
 
 DAY 8
 membuat module/barang/detail/index.php (done)
-membuat module/jual/index.php (undone)
+membuat module/jual/index.php (done)
+
+DAY 9
+Break
+
+DAY 10
+menyelesaikan module/jual/index.php (done)
+
+DAY 11
+membuat module/kategori/index.php (done)
+membuat module/laporan/index.php (done)
