@@ -2,7 +2,7 @@
 <!-- footer start -->
 <footer class="site-footer">
     <div class="text-center">
-        <?php echo date('Y'); ?> - Aplikasi Kasir
+        <?php echo date('Y');?> - Aplikasi Kasir
     </div>
 </footer>
 <!-- footer end -->
@@ -10,8 +10,10 @@
 
 <!-- JS -->
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery-1.8.3.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
 <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
 <script src="assets/js/jquery.sparkline.js"></script>
 
@@ -20,25 +22,27 @@
 
 <!-- common script for all page-->
 <script src="assets/js/common-scripts.js"></script>
-<!-- -1 -->
+
+<script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
 <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
 
 <!-- script for this page -->
 <!-- <script src    = "/assets/js/sparkl"></script> -->
+<script src="assets/js/sparkline-chart.js"></script>
 <script src="assets/js/zabuto_calendar.js"></script>
 
 <script type="text/javascript">
 // datable
 $(function() {
     $("#example1").DataTable();
-    $("#example2").DataTable();
-})
+    $('#example2').DataTable();
+});
 </script>
 <?php
-$sql = " select *from barang where stok <=3";
-$row = $config->prepare($sql);
-$row->execute();
-$q = $row->fetch();
+$sql = " select * from barang where stok <=3";
+$row = $config -> prepare($sql);
+$row-> execute();
+$q = $row -> fetch();
 if ($q['stok'] == 3) {
     if ($q['stok'] == 2) {
         if ($q['stok'] == 1) {
@@ -59,7 +63,7 @@ $(document).ready(function() {
 <?php }}}?>
 <script type="application/javascript">
 $(document).ready(function() {
-    $("$date-popoever").popover({
+    $("#date-popover").popover({
         html: true,
         trigger: "manual"
     });
@@ -68,12 +72,12 @@ $(document).ready(function() {
         $(this).hide();
     });
 
-    $("#my-calender").zabuto_calender({
+    $("#my-calendar").zabuto_calendar({
         action: function() {
             return myDateFunction(this.id, false);
         },
         action_nav: function() {
-            return myDateFunction(this.id);
+            return myNavFunction(this.id);
         },
         ajax: {
             url: "",
@@ -86,7 +90,7 @@ $(document).ready(function() {
 function myNavFunction(id) {
     $("#date-popover").hide();
     var nav = $("#" + id).data("navigation");
-    var to = $("#" + id).data('to');
+    var to = $("#" + id).data(" to");
     console.log('nav' + nav + 'to: ' + to.month + '/' + to.year);
 }
 
@@ -115,7 +119,7 @@ $(document).ready(function() {
     }, 500);
 });
 setTimeout(function() {
-    $("alert-succes").fadeOut('slow');
+    $("alert-success").fadeOut('slow');
 }, 5000);
 </script>
 <script>
@@ -130,8 +134,8 @@ function clickModals() {
 
 function cancelModals() {
     $('.modal-view').fadeIn();
-    $('.modal-create').hide();
-    $('.bg-shadow').hide();
+    $(".modal-create").hide();
+    $(".bg-shadow").hide();
 }
 </script>
 

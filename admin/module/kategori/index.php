@@ -11,12 +11,12 @@
              <div class="col-lg-12 main-chart">
                  <h3>Data Kategori</h3>
                  <br />
-                 <?php if(isset($_GET['succes'])){?>
+                 <?php if(isset($_GET['success'])){?>
                  <div class="alert alert-success">
                      <p>Tambah Data Berhasil !</p>
                  </div>
                  <?php }?>
-                 <?php if(isset($_GET['succes-edit'])){?>
+                 <?php if(isset($_GET['success-edit'])){?>
                  <div class="alert alert-success">
                      <p>Update Data Berhasil !</p>
                  </div>
@@ -30,7 +30,7 @@
                  if (!empty($_GET['uid'])){
                 $sql = "SELECT * FROM kategori WHERE id_kategori = ?";
                 $row = $config->prepare($sql);
-                $row = $execute(array($_GET['uid']));
+                $row ->execute(array($_GET['uid']));
                 $edit = $row->fetch();
                 ?>
                  <form method="POST" action="fungsi/edit/edit.php?kategori=edit">
@@ -61,7 +61,7 @@
                  <br />
                  <table class="table table-bordered" id="exampled1">
                      <thead>
-                         <tr style="background:#DFF0D8;color:#333">
+                         <tr style="background:#DFF0D8;color:#333;">
                              <th>No.</th>
                              <th> Kategori</th>
                              <th> Tanggal Input</th>
@@ -79,8 +79,8 @@
                              <td><?php echo $isi['nama_kategori'];?></td>
                              <td><?php echo $isi['tgl_input'];?></td>
                              <td>
-                                 <a href="index.php?page=kategori&uid=<?php echo $isi
-                ['id_kategori'];?>"><button class="btn btn-warning">Edit</button></a>
+                                 <a href="index.php?page=kategori&uid=<?php echo $isi['id_kategori'];?>"><button
+                                         class="btn btn-warning">Edit</button></a>
                                  <a href="fungsi/hapus/hapus.php?kategori=hapus&id=<?php
                 echo $isi['id_kategori'];?>" onclick="javascript:return
                 confirm('Hapus Data Kategori ?');"><button class="btn btn-danger">Hapus</button></a>
@@ -89,7 +89,7 @@
                          <?php $no++; }?>
                      </tbody>
                  </table>
-                 <div class="clearfix" style="padding: top 16%;"></div>
+                 <div class="clearfix" style="padding-top:16%;"></div>
              </div>
          </div>
      </section>
