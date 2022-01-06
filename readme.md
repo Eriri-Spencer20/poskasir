@@ -54,3 +54,31 @@ DAY 15
 membuat login form & logout.php (done)
 
 update footer & module/kategori/index.php
+
+DAY 16
+
+membuat module/user/index.php (done)
+
+update view on tabel barang and fix the function (done)
+
+DAY 17
+update view on tabel kategori and fix the function
+
+fix some function error
+
+fix sidebar tidak bisa membuka fitur user
+
+REVISI
+
+on barang.php typo < PCS, < Balik, < update data
+
+on edit.php tidak bisa update data
+
+on barang php saat refresh nama barang hilang
+
+saat tambah barang data barang tidak tampil
+
+module jual
+module laporan
+
+fix hapus function
