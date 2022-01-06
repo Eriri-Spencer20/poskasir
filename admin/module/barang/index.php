@@ -10,7 +10,7 @@
             <div class="col-lg-12 main-chart">
                 <h3>Data Barang</h3>
                 <br />
-                <?php if(isset($_GET['success-stok'])){ ?>
+                <?php if (isset($_GET['success-stok'])) { ?>
                 <div class="alert alert-success">
                     <p>Tambah Stok Berhasil !</p>
                 </div>
@@ -28,18 +28,18 @@
 
                 <?php
                 $sql = "select * from barang where stok <= 3";
-                $row = $config -> prepare($sql);
-                $row-> execute();
+                $row = $config->prepare($sql);
+                $row->execute();
                 $r = $row->rowCount();
                 if ($r > 0) {
                 ?>
                 <?php
                     echo "<div> class='alert alert-warning'>
-                    <span class='glyphicon-info-sign'></span>
-                    Ada <span style='color:red'>$r</span> barang yang stok tersisa sudah kurang dari 3 items. Silahkan pesan lagi !!<span class='pull-right'><a href='index.php? page=barang&stok=yes'>Cek BArang <i class='fa fa-angle-double-right'></i></a></span>
+                    <span class='glyphicon glyphicon-info-sign'></span>
+                    Ada <span style='color:red'>$r</span> barang yang stok tersisa sudah kurang dari 3 items. Silahkan pesan lagi !!<span class='pull-right'><a href='index.php? page=barang&stok=yes'>Cek Barang <i class='fa fa-angle-double-right'></i></a></span>
                     </div>
                     ";
-                     }
+                }
                 ?>
                 <!-- Trigger the modal with a button -->
 
@@ -50,7 +50,7 @@
                 <a href="index.php?page=barang&stok=yes" style="margin-right :0.5pc;"
                     class="btn btn-warning btn-md pull-right">
                     <i class="fa fa-list"></i> Sortir Stok Kurang</a>
-                <a href="index.php?page=barang" style="margin-right: 0.5pc;">
+                <a href="index.php?page=barang" style="margin-right: 0.5pc;" class="btn btn-success btn-md pull-right">
                     <i class="fa fa-refresh"></i> Refresh Data</a>
                 <div class="clearfix"></div>
                 <br />
@@ -60,7 +60,7 @@
                     <table class="table table-bordered table-striped" id="example1">
                         <thead>
                             <tr style="background:#DFF0D8; color:#333;">
-                                <th>NO.</th>
+                                <th>No.</th>
                                 <th>ID Barang</th>
                                 <th>Kategori</th>
                                 <th>Nama Barang</th>
@@ -78,67 +78,67 @@
                             $totalBeli = 0;
                             $totalJual = 0;
                             $totalStok = 0;
-                            if($_GET['stok'] == 'yes'){
-                                $hasil = $lihat -> barang_stok();
-                            }else{
-                                $hasil = $lihat -> barang();
+                            if ($_GET['stok'] == 'yes') {
+                                $hasil = $lihat->barang_stok();
+                            } else {
+                                $hasil = $lihat->barang();
                             }
-                            $no=1;
-                            foreach($hasil as $isi){
+                            $no = 1;
+                            foreach ($hasil as $isi) {
                             ?>
                             <tr>
-                                <td><?php echo $no;?></td>
-                                <td><?php echo $isi['id_barang'];?></td>
-                                <td><?php echo $isi['nama_kategori'];?></td>
-                                <td><?php echo $isi['nama_barang '];?></td>
-                                <td><?php echo $isi['merk'];?></td>
-                                <td><?php if($isi['stok'] == '0'){ ?> <button
-                                        class="btn btn-danger">Habis</button><?php }else{?>
-                                    <?php  echo $isi['stok'];?>
-                                    <?php }?>
+                                <td><?php echo $no; ?></td>
+                                <td><?php echo $isi['id_barang']; ?></td>
+                                <td><?php echo $isi['nama_kategori']; ?></td>
+                                <td><?php echo $isi['nama_barang']; ?></td>
+                                <td><?php echo $isi['merk']; ?></td>
+                                <td><?php if ($isi['stok'] == '0') { ?> <button
+                                        class="btn btn-danger">Habis</button><?php } else { ?>
+                                    <?php echo $isi['stok']; ?>
+                                    <?php } ?>
                                 </td>
-                                <td>Rp.<?php echo number_format($isi['harga_beli']);?>,-</td>
-                                <td>Rp.<?php echo number_format($isi['harga_jual']);?>,-</td>
-                                <td><?php echo $isi['satuan_barang'];?> </td>
+                                <td>Rp.<?php echo number_format($isi['harga_beli']); ?>,-</td>
+                                <td>Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
+                                <td><?php echo $isi['satuan_barang']; ?> </td>
                                 <td>
-                                    <?php if($isi['stok'] <= '3'){?>
+                                    <?php if ($isi['stok'] <= '3') { ?>
                                     <form method="POST" action="function/edit/edit.php?stok=edit">
                                         <input type="text" name="restok" class="form-control">
-                                        <input type="hidden" name="id" value="<?php echo $isi['id_barang'];?>"
+                                        <input type="hidden" name="id" value="<?php echo $isi['id_barang']; ?>"
                                             class="form-control">
                                         <button class="btn btn-primary btn-sm">Restok</button>
-                                        <a href="function/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang'];?>"
+                                        <a href="function/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang']; ?>"
                                             onclick="javascript: return confirm('Hapus Data Barang?')">
                                             <buton class="btn btn-danger btn-sm">Hapus</buton>
                                         </a>
                                     </form>
-                                    <?php }else{?>
-                                    <a href="index.php?page=barang/details&barang=<?php echo $isi['id_barang'];?>">
+                                    <?php } else { ?>
+                                    <a href="index.php?page=barang/details&barang=<?php echo $isi['id_barang']; ?>">
                                         <button class="btn btn-primary btn-xs">Details</button></a>
 
-                                    <a href="index.php?page=barang/edit&barang=<?php echo $isi['id_barang'];?>"> <button
-                                            class="btn btn-warning btn-xs">Edit</button></a>
-                                    <a href="function/hapus/hapus.php?barang=hapus$id=<?php echo $isi['id_barang'];?>"
+                                    <a href="index.php?page=barang/edit&barang=<?php echo $isi['id_barang']; ?>">
+                                        <button class="btn btn-warning btn-xs">Edit</button></a>
+                                    <a href="function/hapus/hapus.php?barang=hapus$id=<?php echo $isi['id_barang']; ?>"
                                         onclick="javascript:return confirm('Hapus Data Barang ?')"><button
                                             class="btn btn-danger btn-xs">Hapus</button></a>
-                                    <?php }?>
+                                    <?php } ?>
 
 
                             </tr>
-                            <?php 
-                            $no++;
-                            $totalBeli += $isi['harga_beli'] * $isi ['stok'];
-                            $totalJual += $isi ['harga_jual'] * $isi ['stok'];
-                            $totalStok += $isi ['stok'];
-                                    }
-                                    ?>
+                            <?php
+                                $no++;
+                                $totalBeli += $isi['harga_beli'] * $isi['stok'];
+                                $totalJual += $isi['harga_jual'] * $isi['stok'];
+                                $totalStok += $isi['stok'];
+                            }
+                            ?>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th colspan="5">Total </td>
-                                <th><?php echo $totalStok;?></td>
-                                <th>Rp.<?php echo number_format($totalBeli);?>,-</td>
-                                <th>Rp.<?php echo number_format($totalJual);?>,-</td>
+                                <th><?php echo $totalStok; ?></td>
+                                <th>Rp.<?php echo number_format($totalBeli); ?>,-</td>
+                                <th>Rp.<?php echo number_format($totalJual); ?>,-</td>
                                 <th colspan="2" style="background: #ddd;"></th>
                             </tr>
                         </tfoot>
@@ -162,12 +162,12 @@
 
                                     <table class="table table-striped bordered">
 
-                                        <?php 
-                                            $format = $lihat ->barang_id();?>
+                                        <?php
+                                        $format = $lihat->barang_id(); ?>
                                         <tr>
                                             <td>ID Barang</td>
                                             <td><input type="text" readonly="readonly" required
-                                                    value="<?php echo $format;?>" class="form-control" name="id">
+                                                    value="<?php echo $format; ?>" class="form-control" name="id">
                                             </td>
                                         </tr>
                                         <tr>
@@ -176,10 +176,10 @@
                                                 <select name="kategori" class="form-control" required>
                                                     <option value="#">Pilih Kategori</option>
                                                     <?php $kat = $lihat->kategori();
-                                                        foreach($kat as $isi){
-                                                            ?>
-                                                    <option value="<?php echo $isi['id_kategori'];?>">
-                                                        <?php echo $isi['nama_kategori'];?></option>
+                                                    foreach ($kat as $isi) {
+                                                    ?>
+                                                    <option value="<?php echo $isi['id_kategori']; ?>">
+                                                        <?php echo $isi['nama_kategori']; ?></option>
                                                     <?php  } ?>
                                                 </select>
                                             </td>
@@ -220,12 +220,12 @@
                                         <tr>
                                             <td>Tanggal Input</td>
                                             <td><input type="text" required readonly="readonly" class="form-control"
-                                                    value="<?php echo date("j F Y, G:i");?>" name="tgl"></td>
+                                                    value="<?php echo date("j F Y, G:i"); ?>" name="tgl"></td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus">Insert
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"> Insert
                                             Data</i></button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
