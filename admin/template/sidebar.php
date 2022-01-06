@@ -31,8 +31,8 @@ $hasil_profil = $lihat->member_edit($id);
                 </a>
                 <ul class="sub">
                     <li><a href="index.php?page=barang">Barang</a></li>
-                    <li><a href="index.php?=kategori">Kategori</a></li>
-                    <li><a href="index.php?=user">User</a></li>
+                    <li><a href="index.php?page=kategori">Kategori</a></li>
+                    <li><a href="index.php?page=user">User</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
