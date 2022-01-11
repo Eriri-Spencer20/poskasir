@@ -154,7 +154,7 @@ if(!empty($_SESSION['admin'])){
 		echo '<script>window.location="../../index.php?page=user&success=edit-data"</script>';
 	}
 
-if(!empty($_GET['jual'])){
+	if(!empty($_GET['jual'])){
 		$id = htmlentities($_POST['id']);
 		$id_barang = htmlentities($_POST['id_barang']);
 		$jumlah = htmlentities($_POST['jumlah']);
