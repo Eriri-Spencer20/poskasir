@@ -26,7 +26,7 @@
          <div class="row">
              <div class="col-lg-12 main-chart">
                  <h3>
-                     <!--<a  style="padding-left:2pc;" href="function/hapus/hapus.php?laporan=jual" onclick="javascript:return confirm('Data Laporan akan di Hapus ?');">
+                     <!--<a  style="padding-left:2pc;" href="fungsi/hapus/hapus.php?laporan=jual" onclick="javascript:return confirm('Data Laporan akan di Hapus ?');">
 								<button class="btn btn-danger">RESET</button>
 							</a>-->
                      <?php if(!empty($_GET['cari'])){ ?>

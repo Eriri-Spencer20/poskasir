@@ -12,5 +12,5 @@ try{
 }catch(PDOException $e){
     echo 'KONEKSI GAGAL' .$e -> getMessage();
 }
-$view = 'function/view/view.php';
+$view = 'fungsi/view/view.php';
 ?>

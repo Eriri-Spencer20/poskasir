@@ -27,7 +27,7 @@
                  </div>
                  <?php }?>
                  <table class="table table-striped">
-                     <form action="function/edit/edit.php?barang=edit" method="POST">
+                     <form action="fungsi/edit/edit.php?barang=edit" method="POST">
                          <tr>
                              <td>ID Barang</td>
                              <td><input type="text" readonly="readonly" class="form-control"

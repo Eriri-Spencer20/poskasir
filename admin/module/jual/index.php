@@ -54,7 +54,7 @@
                          <div class="panel-heading">
                              <h4><i class="fa fa-shopping-cart"></i> KASIR
                                  <a class="btn btn-danger pull-right" style="margin-top:-0.5pc;"
-                                     href="function/hapus/hapus.php?penjualan=jual">
+                                     href="fungsi/hapus/hapus.php?penjualan=jual">
                                      <b>RESET KERANJANG</b></a>
                              </h4>
                          </div>
@@ -186,7 +186,7 @@
                                                          Bayar</button>
                                                      <?php  if(!empty($_GET['nota'] == 'yes')) {?>
                                                      <a class="btn btn-danger"
-                                                         href="function/hapus/hapus.php?penjualan=jual">
+                                                         href="fungsi/hapus/hapus.php?penjualan=jual">
                                                          <b>RESET</b></a>
                                                  </td><?php }?></td>
                                              </tr>
@@ -225,7 +225,7 @@ $(document).ready(function() {
     $("#cari").change(function() {
         $.ajax({
             type: "POST",
-            url: "function/edit/edit.php?cari_barang=yes",
+            url: "fungsi/edit/edit.php?cari_barang=yes",
             data: 'keyword=' + $(this).val(),
             beforeSend: function() {
                 $("#hasil_cari").hide();

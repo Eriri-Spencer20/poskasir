@@ -1,24 +1,24 @@
-<?php
+<?php 
 session_start();
-if (!empty($_SESSION['admin'])) {
-    require '../../config.php';
-    if (!empty($_GET['kategori'])) {
-        $id = $_GET['id'];
-        $data[] = $id;
-        $sql = 'DELETE FROM kategori WHERE id_kategori=?';
-        $row = $config->prepare($sql);
-        $row->execute($data);
-        echo '<script>window.location="../../index.php?page=kategori&&remove=hapus-data"</script>';
-    }
-    if (!empty($_GET['barang'])) {
-        $id = $_GET['id'];
-        $data[] = $id;
-        $sql = 'DELETE FROM barang WHERE id_barang?';
-        $row = $config->prepare($sql);
-        $row->execute($data);
-        echo '<script>window.location="../../index.php?page=barang&&remove=hapus-data"</script>';
-    }
-    if(!empty($_GET['jual'])){
+if(!empty($_SESSION['admin'])){
+	require '../../config.php';
+	if(!empty($_GET['kategori'])){
+		$id= $_GET['id'];
+		$data[] = $id;
+		$sql = 'DELETE FROM kategori WHERE id_kategori=?';
+		$row = $config -> prepare($sql);
+		$row -> execute($data);
+		echo '<script>window.location="../../index.php?page=kategori&&remove=hapus-data"</script>';
+	}
+	if(!empty($_GET['barang'])){
+		$id= $_GET['id'];
+		$data[] = $id;
+		$sql = 'DELETE FROM barang WHERE id_barang=?';
+		$row = $config -> prepare($sql);
+		$row -> execute($data);
+		echo '<script>window.location="../../index.php?page=barang&&remove=hapus-data"</script>';
+	}
+	if(!empty($_GET['jual'])){
 		
 		$dataI[] = $_GET['brg'];
 		$sqlI = 'select*from barang where id_barang=?';
@@ -60,3 +60,4 @@ if (!empty($_SESSION['admin'])) {
 		echo '<script>window.location="../../index.php?page=laporan&remove=hapus"</script>';
 	}
 }
+
