@@ -72,7 +72,7 @@
                          </div><!-- /col-md-3-->
                          <!-- STATUS PANELS -->
                          <div class="col-md-3">
-                             <div class="panel panel-info">
+                             <div class="panel panel-warning">
                                  <div class="panel-heading">
                                      <h5><i class="fa fa-desktop"></i> Telah Terjual</h5>
                                  </div>
@@ -120,7 +120,7 @@
          </div><!-- / calendar -->
          </div><!-- /col-lg-3 -->
          </div>
-         <!-- <! --/row --> -->
+         <!-- <! --/row -->
          <div class="clearfix" style="padding-top:23%;"></div>
      </section>
  </section>

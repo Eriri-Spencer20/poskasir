@@ -7,8 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <link rel="icon" href="assets/img/pic/favicon.png">
-    <title>Sistem Penjualan Barang Berbasis Web </title>
+    <!-- Designer of The Vector Art 千图网-->
+    <link rel="icon" href="/assets/img/pic//icon.png">
+    <title>R.F Store </title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -20,7 +21,9 @@
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
 
     <!-- Custom styles for this template -->
+
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -29,7 +32,7 @@
     <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
     <style>
     .header {
-        background: #328f6b;
+        background: #e83e8c;
         color: #fff;
     }
 
