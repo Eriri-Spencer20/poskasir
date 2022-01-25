@@ -8,7 +8,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <!-- Designer of The Vector Art 千图网-->
-    <link rel="icon" href="/assets/img/pic//icon.png">
+    <link rel="icon" href="/assets/img/pic/store.png">
     <title>R.F Store </title>
 
     <!-- Bootstrap core CSS -->
